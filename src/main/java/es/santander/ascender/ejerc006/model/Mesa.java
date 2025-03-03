@@ -16,7 +16,8 @@ public class Mesa {
     private double ancho;
     private double largo;
 
-    public Mesa() {}
+    public Mesa() {
+    }
 
     public Mesa(Long id, String material, double altura, double ancho, double largo) {
         this.id = id;
@@ -26,15 +27,43 @@ public class Mesa {
         this.largo = largo;
     }
 
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-    public String getMaterial() { return material; }
-    public void setMaterial(String material) { this.material = material; }
-    public double getAltura() { return altura; }
-    public void setAltura(double altura) { this.altura = altura; }
-    public double getAncho() { return ancho; }
-    public void setAncho(double ancho) { this.ancho = ancho; }
-    public double getLargo() { return largo; }
-    public void setLargo(double largo) { this.largo = largo; }
-}
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getMaterial() {
+        return material;
+    }
+
+    public void setMaterial(String material) {
+        this.material = material;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+
+    public double getAncho() {
+        return ancho;
+    }
+
+    public void setAncho(double ancho) {
+        this.ancho = ancho;
+    }
+
+    public double getLargo() {
+        return largo;
+    }
+
+    public void setLargo(double largo) {
+        this.largo = largo;
+    }
+}

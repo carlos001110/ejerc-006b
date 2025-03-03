@@ -15,9 +15,9 @@ public class Edificio {
     private int numerosalas;
     private double superficie;
 
-    
     public Edificio() {
     }
+
     public Edificio(Long id, String nombre, String direccion, int numerosalas, double superficie) {
         this.id = id;
         this.nombre = nombre;
@@ -25,36 +25,45 @@ public class Edificio {
         this.numerosalas = numerosalas;
         this.superficie = superficie;
     }
+
     public Long getId() {
         return id;
     }
+
     public void setId(Long id) {
         this.id = id;
     }
+
     public String getNombre() {
         return nombre;
     }
+
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
     public String getDireccion() {
         return direccion;
     }
+
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
+
     public int getNumerosalas() {
         return numerosalas;
     }
+
     public void setNumerosalas(int numerosalas) {
         this.numerosalas = numerosalas;
     }
+
     public double getSuperficie() {
         return superficie;
     }
+
     public void setSuperficie(double superficie) {
         this.superficie = superficie;
     }
 
-    
 }
