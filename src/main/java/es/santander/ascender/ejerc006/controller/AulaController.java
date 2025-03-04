@@ -17,27 +17,23 @@ public class AulaController {
     @Autowired
     private AulaRepository aulaRepository;
 
-    // Crear un aula
     @PostMapping
     public ResponseEntity<Aula> createAula(@RequestBody Aula aula) {
         Aula savedAula = aulaRepository.save(aula);
         return new ResponseEntity<>(savedAula, HttpStatus.CREATED);
     }
 
-    // Obtener todas las aulas
     @GetMapping
     public List<Aula> getAllAulas() {
         return aulaRepository.findAll();
     }
 
-    // Obtener un aula por su ID
     @GetMapping("/{id}")
     public ResponseEntity<Aula> getAulaById(@PathVariable Long id) {
         Optional<Aula> aula = aulaRepository.findById(id);
         return aula.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // Actualizar un aula por su ID
     @PutMapping("/{id}")
     public ResponseEntity<Aula> updateAula(@PathVariable Long id, @RequestBody Aula aula) {
         if (!aulaRepository.existsById(id)) {
@@ -48,7 +44,6 @@ public class AulaController {
         return ResponseEntity.ok(updatedAula);
     }
 
-    // Eliminar un aula por su ID
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteAula(@PathVariable Long id) {
         if (!aulaRepository.existsById(id)) {
